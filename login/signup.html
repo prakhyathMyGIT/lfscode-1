@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - AI Learning</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+        /* --- AI/ML Theme Overrides --- */
+        body.login-page {
+            background-color: #020617;
+            /* Deep space blue/black */
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.08), transparent 25%);
+            color: #f8fafc;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Tech Grid Background Overlay */
+        .tech-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            pointer-events: none;
+        }
+
+        /* Glass Card Override */
+        body.login-page .container {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            max-width: 420px;
+        }
+
+        /* Typography */
+        h2 {
+            font-weight: 700 !important;
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #94a3b8 !important;
+        }
+
+        /* Inputs */
+        body.login-page input[type="text"],
+        body.login-page input[type="password"] {
+            background: rgba(2, 6, 23, 0.5);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        body.login-page input:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+            background: rgba(2, 6, 23, 0.8);
+        }
+
+        body.login-page input::placeholder {
+            color: #475569;
+        }
+
+        /* Buttons */
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.03) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            color: #e2e8f0 !important;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border-color: #e2e8f0 !important;
+        }
+
+        .btn-solid {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb) !important;
+            border: none;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .btn-solid:hover {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.4) !important;
+            transform: translateY(-1px);
+        }
+
+        /* Links & Divider */
+        a.accent-link {
+            color: #38bdf8 !important;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a.accent-link:hover {
+            color: #7dd3fc !important;
+            text-decoration: underline;
+        }
+
+        .go-home {
+            color: #94a3b8 !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            background: rgba(15, 23, 42, 0.8) !important;
+        }
+    </style>
+</head>
+
+<body class="login-page">
+    <div class="tech-grid"></div>
+
+    <!-- Home Button -->
+    <a href="/" class="btn btn-outline go-home">Home</a>
+
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 16px;">
+            <!-- AI Icon -->
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.1 1.1 0 0 0 .33 1.59l2.2 1.5"></path>
+                <path d="M21.8 5.5L19.5 7a1.1 1.1 0 0 0-.33 1.59"></path>
+                <path d="M4.6 15a1.1 1.1 0 0 1-.33 1.59l-2.2 1.5"></path>
+                <path d="M2.2 5.5L4.5 7a1.1 1.1 0 0 1 .33 1.59"></path>
+                <path d="M12 2a10 10 0 0 1 10 10"></path>
+                <path d="M12 22a10 10 0 0 1-10-10"></path>
+            </svg>
+        </div>
+
+        <h2 style="text-align: center;">Join the Future</h2>
+        <p style="text-align: center; margin-bottom: 32px; font-size: 15px; line-height: 1.6;">
+            Create your account to start mastering<br>Python, AI, and Machine Learning.
+        </p>
+
+        <!-- Google Sign Up (Uses existing OAuth route) -->
+        <a href="/auth/google" class="btn btn-outline"
+            style="width: 100%; justify-content: center; margin-bottom: 24px; height: 48px; font-weight: 500;">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" width="20" height="20"
+                style="margin-right: 10px;">
+            Sign up with Google
+        </a>
+
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+            <hr style="flex: 1; border-color: rgba(255,255,255,0.1);">
+            <span style="color: #64748b; font-size: 12px; font-weight: 600; letter-spacing: 0.05em;">OR EMAIL</span>
+            <hr style="flex: 1; border-color: rgba(255,255,255,0.1);">
+        </div>
+
+        <!-- Local Signup Form (Visual Placeholder) -->
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Please use Google Sign Up for now.');">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="email" placeholder="Email address" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit" class="btn btn-solid"
+                style="width: 100%; justify-content: center; margin-top: 16px; height: 48px;">
+                Initialize Account
+            </button>
+        </form>
+
+        <p style="text-align: center; margin-top: 28px; font-size: 14px;">
+            Already a member? <a href="/login" class="accent-link">Log in</a>
+        </p>
+    </div>
+</body>
+
+</html>

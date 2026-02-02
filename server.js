@@ -128,8 +128,8 @@ app.get("/api/session", (req, res) => {
   const photos = Array.isArray(profile.photos)
     ? profile.photos
     : profile.picture
-    ? [{ value: profile.picture }]
-    : undefined;
+      ? [{ value: profile.picture }]
+      : undefined;
 
   res.json({
     authenticated: true,
@@ -200,6 +200,11 @@ app.get("/", (req, res) => {
 // Public login page
 app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "login", "login.html"));
+});
+
+// Public signup page
+app.get("/signup", (req, res) => {
+  res.sendFile(path.join(__dirname, "login", "signup.html"));
 });
 
 // Start Google OAuth
